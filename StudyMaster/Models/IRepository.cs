@@ -7,5 +7,6 @@ namespace StudyMaster.Models
 {
     public interface IRepository
     {
+        IEnumerable<Question> GetAllQuestions { get;}
     }
 }

@@ -10,11 +10,11 @@ namespace StudyMaster.Models
     {
         public long SelectionId { get; set; }
 
-        public string ContentA { get; set; }
-        public string ContentB { get; set; }
-        public string ContentC { get; set; }
-        public string ContentD { get; set; }
+        public string Content { get; set; }
 
+        public bool check { get; set; }
+
+        public Question Question { get; set; }
         public long QuestionId { get; set; }
     }
 }

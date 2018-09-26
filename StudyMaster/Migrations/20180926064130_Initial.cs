@@ -14,7 +14,6 @@ namespace StudyMaster.Migrations
                     QuestionId = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Content = table.Column<string>(nullable: true),
-                    Result = table.Column<int>(nullable: false),
                     Answer = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -28,10 +27,8 @@ namespace StudyMaster.Migrations
                 {
                     SelectionId = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    ContentA = table.Column<string>(nullable: true),
-                    ContentB = table.Column<string>(nullable: true),
-                    ContentC = table.Column<string>(nullable: true),
-                    ContentD = table.Column<string>(nullable: true),
+                    Content = table.Column<string>(nullable: true),
+                    check = table.Column<bool>(nullable: false),
                     QuestionId = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
@@ -48,8 +45,7 @@ namespace StudyMaster.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Selections_QuestionId",
                 table: "Selections",
-                column: "QuestionId",
-                unique: true);
+                column: "QuestionId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

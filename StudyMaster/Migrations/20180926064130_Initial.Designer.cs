@@ -9,7 +9,7 @@ using StudyMaster.Models;
 namespace StudyMaster.Migrations
 {
     [DbContext(typeof(EFDatabaseContext))]
-    [Migration("20180926044414_Initial")]
+    [Migration("20180926064130_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,8 +30,6 @@ namespace StudyMaster.Migrations
 
                     b.Property<string>("Content");
 
-                    b.Property<int>("Result");
-
                     b.HasKey("QuestionId");
 
                     b.ToTable("Questions");
@@ -43,29 +41,24 @@ namespace StudyMaster.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ContentA");
-
-                    b.Property<string>("ContentB");
-
-                    b.Property<string>("ContentC");
-
-                    b.Property<string>("ContentD");
+                    b.Property<string>("Content");
 
                     b.Property<long>("QuestionId");
 
+                    b.Property<bool>("check");
+
                     b.HasKey("SelectionId");
 
-                    b.HasIndex("QuestionId")
-                        .IsUnique();
+                    b.HasIndex("QuestionId");
 
                     b.ToTable("Selections");
                 });
 
             modelBuilder.Entity("StudyMaster.Models.Selection", b =>
                 {
-                    b.HasOne("StudyMaster.Models.Question")
-                        .WithOne("Selection")
-                        .HasForeignKey("StudyMaster.Models.Selection", "QuestionId")
+                    b.HasOne("StudyMaster.Models.Question", "Question")
+                        .WithMany("Selections")
+                        .HasForeignKey("QuestionId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
