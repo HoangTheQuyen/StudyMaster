@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 
 namespace StudyMaster.Models
 {
-    public enum Select
-    {
-        a, b, c, d
-    }
+
     public class Selection
     {
         public long SelectionId { get; set; }
 
-        public IEnumerable<Dictionary<Select, string>> Select { get; set; }
+        public string ContentA { get; set; }
+        public string ContentB { get; set; }
+        public string ContentC { get; set; }
+        public string ContentD { get; set; }
 
-        public Question QuestionId { get; set; }
+        public long QuestionId { get; set; }
     }
 }
