@@ -4,4 +4,20 @@
     int i = 0;
 }
 
-
+<div class="container container-fluid p-2">
+    @foreach (Question qs in Model)
+    {
+        char a = 'a';
+        <h4>Câu @(i + 1): @qs.Content</h4>
+        @foreach (Selection sl in qs.Selections)
+        {
+            <div class="form-check">
+                <label class="form-check-label">
+                    @a: &nbsp; &nbsp;&nbsp; <input type="radio" class="form-check-input" name="@sl.QuestionId">@sl.Content
+                </label>
+            </div>
+            a++;
+        }
+        i++;
+    }
+</div>
