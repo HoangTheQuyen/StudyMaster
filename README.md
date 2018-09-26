@@ -16,7 +16,7 @@ Hướng dẫn chạy đồ án
 + Tải file SDK của .NET CORE version > 2.0 và istall nó : https://www.microsoft.com/net/download
 + Kiểm tra xem đã instal success chưa: vào cmd và chạy lệnh: dotnet --version.
 + Tạo CSDL ở Local bằng cách di chuyển đến thư mục Project và chạy console: dotnet ef database update (Khi đã có)
-+ Khởi chạy dự án bằng cách: dotnet run (Mặc định sẽ là cổng thứ 5000)
++ Khởi chạy dự án bằng cách: dotnet run (Mặc định sẽ là cổng thứ 5000 ở local)
 
 Yêu Cầu Đồ án: 
 + Hỗ trợ responsive web.
