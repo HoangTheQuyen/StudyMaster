@@ -1,16 +1,16 @@
 Đồ án môn Quản Lí Yêu Cầu Phần Mềm
 
 + 1512126	Nguyễn Hữu Đức
-1512350	Bùi Như Ngọc
-1412412	Phùng Đức Phú
-1512445	Hoàng Thế Quyền
-1512453	Lê Phú Sang
-1312157	Cao Xuân Hà
-1512128	Nguyễn Tấn Đức
-1512174	Hồ Văn Hoàng
-1512590	Trần Trung Trạng
-1512623	Đinh Quang Trường
-1512675	Tạ Đình Vinh
++ 1512350	- Bùi Như Ngọc
++ 1412412	- Phùng Đức Phú
++ 1512445	- Hoàng Thế Quyền
++ 1512453	- Lê Phú Sang
++ 1312157	- Cao Xuân Hà
++ 1512128	- Nguyễn Tấn Đức
++ 1512174	- Hồ Văn Hoàng
++ 1512590	- Trần Trung Trạng
++ 1512623	- Đinh Quang Trường
++ 1512675	- Tạ Đình Vinh
 
 Hướng dẫn chạy đồ án
 + Tải file SDK của .NET CORE version > 2.0 và istall nó : https://www.microsoft.com/net/download
