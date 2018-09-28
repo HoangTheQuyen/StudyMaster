@@ -1,23 +1,783 @@
-﻿@model IEnumerable<Question>
+﻿
+<div id="HiddenQuestionDivID253985" class="HiddenQuestionDivID">
+    <div id="Content253985" class="DivContent">
+        <table border="0" cellpadding="5" cellspacing="5" style="width: 100%; border-bottom:solid 1px #dddddd; ">
+            <tbody>
+                <tr valign="top"><td align="right"><b><font face="times" size="3" class="textQuestion"> Bài 1. </font></b></td><td style="width: 91%"> <font face="times" size="3" class="textQuestion"> ____________________ over warm waters. </font> </td></tr>
+                <tr valign="top">
+                    <td align="right">
+                        <b><font face="times" size="3" class="textQuestion">A.</font></b><b><input id="rdA253985" type="radio" name="name253985" onclick="return CheckKey('A',253985,0,'A',1,18523.9944016784)"></b>
+                    </td>
+                    <td style="width: 91%"> <font face="times" size="3" class="textQuestion">Hurricanes strengthen</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">B.</font></b><b><input id="rdB253985" type="radio" name="name253985" onclick="return CheckKey('B',253985,0,'A',1,18523.9944016784)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">Strengthened, hurricanes</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">C.</font></b><b><input id="rdC253985" type="radio" name="name253985" onclick="return CheckKey('C',253985,0,'A',1,18523.9944016784)"></b></td>
+                    <td style="width: 91%">
+                        <font face="times" size="3" class="textQuestion">Hurricanes’ strength</font>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b> <font face="times" size="3" class="textQuestion">D.</font></b><b><input id="rdd253985" type="radio" name="name253985" onclick="return CheckKey('D',253985,0,'A',1,18523.9944016784)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">Strengthening hurricanes</font></td>
+                </tr>
+            </tbody>
+        </table><div id="Item253985" style="background-color:#f8f8f8;" align="center"></div><div id="BaiTap253985" style="display:none">
+            <table border="0" cellpadding="3" cellspacing="3" style="width: 100%; background-color:#f2f2f2;border-bottom:solid 1px #dddddd; ">
+                <tbody>
+                    <tr>
+                        <td style="padding-left:20px"> <span id="Key253985" style="padding:1px; font-weight:bold"></span></td>
+                        <td><a href="javascript:RegisterAnswer(253985)">ID:253985</a></td>
 
-@{
-    int i = 0;
-}
+                        <td style="color:#666666">Chưa phân loại</td>
+                        <td>
+                            <a href="javascript:ShowComment(253985)"><span> <span style="color:#333333;"> (1)</span> Lời giải &amp; Bình luận </span></a>
+                        </td>
+                        <td>
+                            <div id="div1" style=" font-size:8pt; color:Blue" align="right">
+                                <span id="SpanLikeName253985">
+                                    <a href="javascript:Like(253985);"> Theo dõi </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td style="padding-left:30px;padding-right:10px" align="right">
+                            <a href="javascript:ReportQuestion(253985)">Report</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Comment253985" style="background-color:#eceff5;"></div>
+    </div>
+</div>
 
-<div class="container container-fluid p-2">
-    @foreach (Question qs in Model)
-    {
-        char a = 'a';
-        <h4>Câu @(i + 1): @qs.Content</h4>
-        @foreach (Selection sl in qs.Selections)
-        {
-            <div class="form-check">
-                <label class="form-check-label">
-                    @a: &nbsp; &nbsp;&nbsp; <input type="radio" class="form-check-input" name="@sl.QuestionId">@sl.Content
-                </label>
-            </div>
-            a++;
-        }
-        i++;
-    }
+
+<div id="HiddenQuestionDivID253986" class="HiddenQuestionDivID">
+    <div id="Content253986" class="DivContent">
+        <table border="0" cellpadding="5" cellspacing="5" style="width: 100%; border-bottom:solid 1px #dddddd; ">
+            <tbody>
+                <tr valign="top"><td align="right"><b><font face="times" size="3" class="textQuestion"> Bài 2. </font></b></td><td style="width: 91%"> <font face="times" size="3" class="textQuestion"> ______________ to tackle the hardest chores first. </font> </td></tr>
+                <tr valign="top">
+                    <td align="right">
+                        <b><font face="times" size="3" class="textQuestion">A.</font></b><b><input id="rdA253986" type="radio" name="name253986" onclick="return CheckKey('A',253986,0,'A',1,18524.0225332223)"></b>
+                    </td>
+                    <td style="width: 91%"> <font face="times" size="3" class="textQuestion">Is it good</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">B.</font></b><b><input id="rdB253986" type="radio" name="name253986" onclick="return CheckKey('B',253986,0,'A',1,18524.0225332223)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">There is good</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">C.</font></b><b><input id="rdC253986" type="radio" name="name253986" onclick="return CheckKey('C',253986,0,'A',1,18524.0225332223)"></b></td>
+                    <td style="width: 91%">
+                        <font face="times" size="3" class="textQuestion">It is good</font>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b> <font face="times" size="3" class="textQuestion">D.</font></b><b><input id="rdd253986" type="radio" name="name253986" onclick="return CheckKey('D',253986,0,'A',1,18524.0225332223)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">Good if you</font></td>
+                </tr>
+            </tbody>
+        </table><div id="Item253986" style="background-color:#f8f8f8;" align="center"></div><div id="BaiTap253986" style="display:none">
+            <table border="0" cellpadding="3" cellspacing="3" style="width: 100%; background-color:#f2f2f2;border-bottom:solid 1px #dddddd; ">
+                <tbody>
+                    <tr>
+                        <td style="padding-left:20px"> <span id="Key253986" style="padding:1px; font-weight:bold"></span></td>
+                        <td><a href="javascript:RegisterAnswer(253986)">ID:253986</a></td>
+
+                        <td style="color:#666666">Chưa phân loại</td>
+                        <td>
+                            <a href="javascript:ShowComment(253986)"><span> <span style="color:#333333;"> (7)</span> Lời giải &amp; Bình luận </span></a>
+                        </td>
+                        <td>
+                            <div id="div1" style=" font-size:8pt; color:Blue" align="right">
+                                <span id="SpanLikeName253986">
+                                    <a href="javascript:Like(253986);"> Theo dõi </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td style="padding-left:30px;padding-right:10px" align="right">
+                            <a href="javascript:ReportQuestion(253986)">Report</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Comment253986" style="background-color:#eceff5;"></div>
+    </div>
+</div>
+
+
+<div id="HiddenQuestionDivID253987" class="HiddenQuestionDivID">
+    <div id="Content253987" class="DivContent">
+        <table border="0" cellpadding="5" cellspacing="5" style="width: 100%; border-bottom:solid 1px #dddddd; ">
+            <tbody>
+                <tr valign="top"><td align="right"><b><font face="times" size="3" class="textQuestion"> Bài 3. </font></b></td><td style="width: 91%"> <font face="times" size="3" class="textQuestion"> The Alps in Switzerland ____________________. </font> </td></tr>
+                <tr valign="top">
+                    <td align="right">
+                        <b><font face="times" size="3" class="textQuestion">A.</font></b><b><input id="rdA253987" type="radio" name="name253987" onclick="return CheckKey('A',253987,0,'A',1,18524.0506647107)"></b>
+                    </td>
+                    <td style="width: 91%"> <font face="times" size="3" class="textQuestion">breathtaking as they are</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">B.</font></b><b><input id="rdB253987" type="radio" name="name253987" onclick="return CheckKey('B',253987,0,'A',1,18524.0506647107)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">to be breathtaking</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">C.</font></b><b><input id="rdC253987" type="radio" name="name253987" onclick="return CheckKey('C',253987,0,'A',1,18524.0506647107)"></b></td>
+                    <td style="width: 91%">
+                        <font face="times" size="3" class="textQuestion">that are breathtaking</font>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b> <font face="times" size="3" class="textQuestion">D.</font></b><b><input id="rdd253987" type="radio" name="name253987" onclick="return CheckKey('D',253987,0,'A',1,18524.0506647107)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">are breathtaking</font></td>
+                </tr>
+            </tbody>
+        </table><div id="Item253987" style="background-color:#f8f8f8;" align="center"></div><div id="BaiTap253987" style="display:none">
+            <table border="0" cellpadding="3" cellspacing="3" style="width: 100%; background-color:#f2f2f2;border-bottom:solid 1px #dddddd; ">
+                <tbody>
+                    <tr>
+                        <td style="padding-left:20px"> <span id="Key253987" style="padding:1px; font-weight:bold"></span></td>
+                        <td><a href="javascript:RegisterAnswer(253987)">ID:253987</a></td>
+
+                        <td style="color:#666666">Chưa phân loại</td>
+                        <td>
+                            <a href="javascript:ShowComment(253987)"><span> <span style="color:#333333;"> (8)</span> Lời giải &amp; Bình luận </span></a>
+                        </td>
+                        <td>
+                            <div id="div1" style=" font-size:8pt; color:Blue" align="right">
+                                <span id="SpanLikeName253987">
+                                    <a href="javascript:Like(253987);"> Theo dõi </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td style="padding-left:30px;padding-right:10px" align="right">
+                            <a href="javascript:ReportQuestion(253987)">Report</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Comment253987" style="background-color:#eceff5;"></div>
+    </div>
+</div>
+
+
+<div id="HiddenQuestionDivID253988" class="HiddenQuestionDivID">
+    <div id="Content253988" class="DivContent">
+        <table border="0" cellpadding="5" cellspacing="5" style="width: 100%; border-bottom:solid 1px #dddddd; ">
+            <tbody>
+                <tr valign="top"><td align="right"><b><font face="times" size="3" class="textQuestion"> Bài 4. </font></b></td><td style="width: 91%"> <font face="times" size="3" class="textQuestion"> ______________ two major lakes, Hoan Kiem Lake and West Lake. </font> </td></tr>
+                <tr valign="top">
+                    <td align="right">
+                        <b><font face="times" size="3" class="textQuestion">A.</font></b><b><input id="rdA253988" type="radio" name="name253988" onclick="return CheckKey('A',253988,0,'A',1,18524.0787961438)"></b>
+                    </td>
+                    <td style="width: 91%"> <font face="times" size="3" class="textQuestion">There in Hanoi</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">B.</font></b><b><input id="rdB253988" type="radio" name="name253988" onclick="return CheckKey('B',253988,0,'A',1,18524.0787961438)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">Hanoi has</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">C.</font></b><b><input id="rdC253988" type="radio" name="name253988" onclick="return CheckKey('C',253988,0,'A',1,18524.0787961438)"></b></td>
+                    <td style="width: 91%">
+                        <font face="times" size="3" class="textQuestion">In Hanoi</font>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b> <font face="times" size="3" class="textQuestion">D.</font></b><b><input id="rdd253988" type="radio" name="name253988" onclick="return CheckKey('D',253988,0,'A',1,18524.0787961438)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">&nbsp;Hanoi, with its</font></td>
+                </tr>
+            </tbody>
+        </table><div id="Item253988" style="background-color:#f8f8f8;" align="center"></div><div id="BaiTap253988" style="display:none">
+            <table border="0" cellpadding="3" cellspacing="3" style="width: 100%; background-color:#f2f2f2;border-bottom:solid 1px #dddddd; ">
+                <tbody>
+                    <tr>
+                        <td style="padding-left:20px"> <span id="Key253988" style="padding:1px; font-weight:bold"></span></td>
+                        <td><a href="javascript:RegisterAnswer(253988)">ID:253988</a></td>
+
+                        <td style="color:#666666">Chưa phân loại</td>
+                        <td>
+                            <a href="javascript:ShowComment(253988)"><span> <span style="color:#333333;"> (0)</span> Lời giải &amp; Bình luận </span></a>
+                        </td>
+                        <td>
+                            <div id="div1" style=" font-size:8pt; color:Blue" align="right">
+                                <span id="SpanLikeName253988">
+                                    <a href="javascript:Like(253988);"> Theo dõi </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td style="padding-left:30px;padding-right:10px" align="right">
+                            <a href="javascript:ReportQuestion(253988)">Report</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Comment253988" style="background-color:#eceff5;"></div>
+    </div>
+</div>
+
+
+<div id="HiddenQuestionDivID253989" class="HiddenQuestionDivID">
+    <div id="Content253989" class="DivContent">
+        <table border="0" cellpadding="5" cellspacing="5" style="width: 100%; border-bottom:solid 1px #dddddd; ">
+            <tbody>
+                <tr valign="top"><td align="right"><b><font face="times" size="3" class="textQuestion"> Bài 5. </font></b></td><td style="width: 91%"> <font face="times" size="3" class="textQuestion"> We can hardly ____________________ the newly aired series. </font> </td></tr>
+                <tr valign="top">
+                    <td align="right">
+                        <b><font face="times" size="3" class="textQuestion">A.</font></b><b><input id="rdA253989" type="radio" name="name253989" onclick="return CheckKey('A',253989,0,'A',1,18524.1069275216)"></b>
+                    </td>
+                    <td style="width: 91%"> <font face="times" size="3" class="textQuestion">wait to see</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">B.</font></b><b><input id="rdB253989" type="radio" name="name253989" onclick="return CheckKey('B',253989,0,'A',1,18524.1069275216)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">to wait for</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">C.</font></b><b><input id="rdC253989" type="radio" name="name253989" onclick="return CheckKey('C',253989,0,'A',1,18524.1069275216)"></b></td>
+                    <td style="width: 91%">
+                        <font face="times" size="3" class="textQuestion">the wait for</font>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b> <font face="times" size="3" class="textQuestion">D.</font></b><b><input id="rdd253989" type="radio" name="name253989" onclick="return CheckKey('D',253989,0,'A',1,18524.1069275216)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">that we wait to see</font></td>
+                </tr>
+            </tbody>
+        </table><div id="Item253989" style="background-color:#f8f8f8;" align="center"></div><div id="BaiTap253989" style="display:none">
+            <table border="0" cellpadding="3" cellspacing="3" style="width: 100%; background-color:#f2f2f2;border-bottom:solid 1px #dddddd; ">
+                <tbody>
+                    <tr>
+                        <td style="padding-left:20px"> <span id="Key253989" style="padding:1px; font-weight:bold"></span></td>
+                        <td><a href="javascript:RegisterAnswer(253989)">ID:253989</a></td>
+
+                        <td style="color:#666666">Chưa phân loại</td>
+                        <td>
+                            <a href="javascript:ShowComment(253989)"><span> <span style="color:#333333;"> (1)</span> Lời giải &amp; Bình luận </span></a>
+                        </td>
+                        <td>
+                            <div id="div1" style=" font-size:8pt; color:Blue" align="right">
+                                <span id="SpanLikeName253989">
+                                    <a href="javascript:Like(253989);"> Theo dõi </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td style="padding-left:30px;padding-right:10px" align="right">
+                            <a href="javascript:ReportQuestion(253989)">Report</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Comment253989" style="background-color:#eceff5;"></div>
+    </div>
+</div>
+
+
+<div id="HiddenQuestionDivID253990" class="HiddenQuestionDivID">
+    <div id="Content253990" class="DivContent">
+        <table border="0" cellpadding="5" cellspacing="5" style="width: 100%; border-bottom:solid 1px #dddddd; ">
+            <tbody>
+                <tr valign="top"><td align="right"><b><font face="times" size="3" class="textQuestion"> Bài 6. </font></b></td><td style="width: 91%"> <font face="times" size="3" class="textQuestion"> This 2017 spring-summer collection _________________________. </font> </td></tr>
+                <tr valign="top">
+                    <td align="right">
+                        <b><font face="times" size="3" class="textQuestion">A.</font></b><b><input id="rdA253990" type="radio" name="name253990" onclick="return CheckKey('A',253990,0,'A',1,18524.1350588439)"></b>
+                    </td>
+                    <td style="width: 91%"> <font face="times" size="3" class="textQuestion">which lacks diversity</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">B.</font></b><b><input id="rdB253990" type="radio" name="name253990" onclick="return CheckKey('B',253990,0,'A',1,18524.1350588439)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">being lacked in diversity</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">C.</font></b><b><input id="rdC253990" type="radio" name="name253990" onclick="return CheckKey('C',253990,0,'A',1,18524.1350588439)"></b></td>
+                    <td style="width: 91%">
+                        <font face="times" size="3" class="textQuestion">is lacking in diversity</font>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b> <font face="times" size="3" class="textQuestion">D.</font></b><b><input id="rdd253990" type="radio" name="name253990" onclick="return CheckKey('D',253990,0,'A',1,18524.1350588439)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">its diversity is lacking</font></td>
+                </tr>
+            </tbody>
+        </table><div id="Item253990" style="background-color:#f8f8f8;" align="center"></div><div id="BaiTap253990" style="display:none">
+            <table border="0" cellpadding="3" cellspacing="3" style="width: 100%; background-color:#f2f2f2;border-bottom:solid 1px #dddddd; ">
+                <tbody>
+                    <tr>
+                        <td style="padding-left:20px"> <span id="Key253990" style="padding:1px; font-weight:bold"></span></td>
+                        <td><a href="javascript:RegisterAnswer(253990)">ID:253990</a></td>
+
+                        <td style="color:#666666">Chưa phân loại</td>
+                        <td>
+                            <a href="javascript:ShowComment(253990)"><span> <span style="color:#333333;"> (0)</span> Lời giải &amp; Bình luận </span></a>
+                        </td>
+                        <td>
+                            <div id="div1" style=" font-size:8pt; color:Blue" align="right">
+                                <span id="SpanLikeName253990">
+                                    <a href="javascript:Like(253990);"> Theo dõi </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td style="padding-left:30px;padding-right:10px" align="right">
+                            <a href="javascript:ReportQuestion(253990)">Report</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Comment253990" style="background-color:#eceff5;"></div>
+    </div>
+</div>
+
+
+<div id="HiddenQuestionDivID253991" class="HiddenQuestionDivID">
+    <div id="Content253991" class="DivContent">
+        <table border="0" cellpadding="5" cellspacing="5" style="width: 100%; border-bottom:solid 1px #dddddd; ">
+            <tbody>
+                <tr valign="top"><td align="right"><b><font face="times" size="3" class="textQuestion"> Bài 7. </font></b></td><td style="width: 91%"> <font face="times" size="3" class="textQuestion"> _____________________________ all by herself. </font> </td></tr>
+                <tr valign="top">
+                    <td align="right">
+                        <b><font face="times" size="3" class="textQuestion">A.</font></b><b><input id="rdA253991" type="radio" name="name253991" onclick="return CheckKey('A',253991,0,'A',1,18524.1631901109)"></b>
+                    </td>
+                    <td style="width: 91%"> <font face="times" size="3" class="textQuestion">Meredith fixed the leaky faucet</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">B.</font></b><b><input id="rdB253991" type="radio" name="name253991" onclick="return CheckKey('B',253991,0,'A',1,18524.1631901109)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">Fixed the leaky faucet, Meredith</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">C.</font></b><b><input id="rdC253991" type="radio" name="name253991" onclick="return CheckKey('C',253991,0,'A',1,18524.1631901109)"></b></td>
+                    <td style="width: 91%">
+                        <font face="times" size="3" class="textQuestion">Fixing Meredith’s leaky faucet</font>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b> <font face="times" size="3" class="textQuestion">D.</font></b><b><input id="rdd253991" type="radio" name="name253991" onclick="return CheckKey('D',253991,0,'A',1,18524.1631901109)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">The leaky faucet of Meredith being fixed</font></td>
+                </tr>
+            </tbody>
+        </table><div id="Item253991" style="background-color:#f8f8f8;" align="center"></div><div id="BaiTap253991" style="display:none">
+            <table border="0" cellpadding="3" cellspacing="3" style="width: 100%; background-color:#f2f2f2;border-bottom:solid 1px #dddddd; ">
+                <tbody>
+                    <tr>
+                        <td style="padding-left:20px"> <span id="Key253991" style="padding:1px; font-weight:bold"></span></td>
+                        <td><a href="javascript:RegisterAnswer(253991)">ID:253991</a></td>
+
+                        <td style="color:#666666">Chưa phân loại</td>
+                        <td>
+                            <a href="javascript:ShowComment(253991)"><span> <span style="color:#333333;"> (2)</span> Lời giải &amp; Bình luận </span></a>
+                        </td>
+                        <td>
+                            <div id="div1" style=" font-size:8pt; color:Blue" align="right">
+                                <span id="SpanLikeName253991">
+                                    <a href="javascript:Like(253991);"> Theo dõi </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td style="padding-left:30px;padding-right:10px" align="right">
+                            <a href="javascript:ReportQuestion(253991)">Report</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Comment253991" style="background-color:#eceff5;"></div>
+    </div>
+</div>
+
+
+<div id="HiddenQuestionDivID253992" class="HiddenQuestionDivID">
+    <div id="Content253992" class="DivContent">
+        <table border="0" cellpadding="5" cellspacing="5" style="width: 100%; border-bottom:solid 1px #dddddd; ">
+            <tbody>
+                <tr valign="top"><td align="right"><b><font face="times" size="3" class="textQuestion"> Bài 8. </font></b></td><td style="width: 91%"> <font face="times" size="3" class="textQuestion"> _____________________________ a sundae instead of a double-scoop cone. </font> </td></tr>
+                <tr valign="top">
+                    <td align="right">
+                        <b><font face="times" size="3" class="textQuestion">A.</font></b><b><input id="rdA253992" type="radio" name="name253992" onclick="return CheckKey('A',253992,0,'A',1,18524.1913213225)"></b>
+                    </td>
+                    <td style="width: 91%"> <font face="times" size="3" class="textQuestion">Andrew’s decision to buy</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">B.</font></b><b><input id="rdB253992" type="radio" name="name253992" onclick="return CheckKey('B',253992,0,'A',1,18524.1913213225)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">The fact that Andrew bought</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">C.</font></b><b><input id="rdC253992" type="radio" name="name253992" onclick="return CheckKey('C',253992,0,'A',1,18524.1913213225)"></b></td>
+                    <td style="width: 91%">
+                        <font face="times" size="3" class="textQuestion">Andrew, who bought</font>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b> <font face="times" size="3" class="textQuestion">D.</font></b><b><input id="rdd253992" type="radio" name="name253992" onclick="return CheckKey('D',253992,0,'A',1,18524.1913213225)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">Andrew decided to buy</font></td>
+                </tr>
+            </tbody>
+        </table><div id="Item253992" style="background-color:#f8f8f8;" align="center"></div><div id="BaiTap253992" style="display:none">
+            <table border="0" cellpadding="3" cellspacing="3" style="width: 100%; background-color:#f2f2f2;border-bottom:solid 1px #dddddd; ">
+                <tbody>
+                    <tr>
+                        <td style="padding-left:20px"> <span id="Key253992" style="padding:1px; font-weight:bold"></span></td>
+                        <td><a href="javascript:RegisterAnswer(253992)">ID:253992</a></td>
+
+                        <td style="color:#666666">Chưa phân loại</td>
+                        <td>
+                            <a href="javascript:ShowComment(253992)"><span> <span style="color:#333333;"> (4)</span> Lời giải &amp; Bình luận </span></a>
+                        </td>
+                        <td>
+                            <div id="div1" style=" font-size:8pt; color:Blue" align="right">
+                                <span id="SpanLikeName253992">
+                                    <a href="javascript:Like(253992);"> Theo dõi </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td style="padding-left:30px;padding-right:10px" align="right">
+                            <a href="javascript:ReportQuestion(253992)">Report</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Comment253992" style="background-color:#eceff5;"></div>
+    </div>
+</div>
+
+
+<div id="HiddenQuestionDivID253993" class="HiddenQuestionDivID">
+    <div id="Content253993" class="DivContent">
+        <table border="0" cellpadding="5" cellspacing="5" style="width: 100%; border-bottom:solid 1px #dddddd; ">
+            <tbody>
+                <tr valign="top"><td align="right"><b><font face="times" size="3" class="textQuestion"> Bài 9. </font></b></td><td style="width: 91%"> <font face="times" size="3" class="textQuestion"> Cheetahs ___________________ land animals. </font> </td></tr>
+                <tr valign="top">
+                    <td align="right">
+                        <b><font face="times" size="3" class="textQuestion">A.</font></b><b><input id="rdA253993" type="radio" name="name253993" onclick="return CheckKey('A',253993,0,'A',1,18524.2194524787)"></b>
+                    </td>
+                    <td style="width: 91%"> <font face="times" size="3" class="textQuestion">with their fast speeed, which are undoubtably</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">B.</font></b><b><input id="rdB253993" type="radio" name="name253993" onclick="return CheckKey('B',253993,0,'A',1,18524.2194524787)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">are undoubtably the fastest</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">C.</font></b><b><input id="rdC253993" type="radio" name="name253993" onclick="return CheckKey('C',253993,0,'A',1,18524.2194524787)"></b></td>
+                    <td style="width: 91%">
+                        <font face="times" size="3" class="textQuestion">that are undoubtably the fastest</font>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b> <font face="times" size="3" class="textQuestion">D.</font></b><b><input id="rdd253993" type="radio" name="name253993" onclick="return CheckKey('D',253993,0,'A',1,18524.2194524787)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">the undoubtably fastest among</font></td>
+                </tr>
+            </tbody>
+        </table><div id="Item253993" style="background-color:#f8f8f8;" align="center"></div><div id="BaiTap253993" style="display:none">
+            <table border="0" cellpadding="3" cellspacing="3" style="width: 100%; background-color:#f2f2f2;border-bottom:solid 1px #dddddd; ">
+                <tbody>
+                    <tr>
+                        <td style="padding-left:20px"> <span id="Key253993" style="padding:1px; font-weight:bold"></span></td>
+                        <td><a href="javascript:RegisterAnswer(253993)">ID:253993</a></td>
+
+                        <td style="color:#666666">Chưa phân loại</td>
+                        <td>
+                            <a href="javascript:ShowComment(253993)"><span> <span style="color:#333333;"> (5)</span> Lời giải &amp; Bình luận </span></a>
+                        </td>
+                        <td>
+                            <div id="div1" style=" font-size:8pt; color:Blue" align="right">
+                                <span id="SpanLikeName253993">
+                                    <a href="javascript:Like(253993);"> Theo dõi </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td style="padding-left:30px;padding-right:10px" align="right">
+                            <a href="javascript:ReportQuestion(253993)">Report</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Comment253993" style="background-color:#eceff5;"></div>
+    </div>
+</div>
+
+
+<div id="HiddenQuestionDivID253994" class="HiddenQuestionDivID">
+    <div id="Content253994" class="DivContent">
+        <table border="0" cellpadding="5" cellspacing="5" style="width: 100%; border-bottom:solid 1px #dddddd; ">
+            <tbody>
+                <tr valign="top"><td align="right"><b><font face="times" size="3" class="textQuestion"> Bài 10. </font></b></td><td style="width: 91%"> <font face="times" size="3" class="textQuestion"> ____________________________ at the community college. </font> </td></tr>
+                <tr valign="top">
+                    <td align="right">
+                        <b><font face="times" size="3" class="textQuestion">A.</font></b><b><input id="rdA253994" type="radio" name="name253994" onclick="return CheckKey('A',253994,0,'A',1,18524.2475835795)"></b>
+                    </td>
+                    <td style="width: 91%"> <font face="times" size="3" class="textQuestion">Joan has been a lecturer of science and algebra</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">B.</font></b><b><input id="rdB253994" type="radio" name="name253994" onclick="return CheckKey('B',253994,0,'A',1,18524.2475835795)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">Joan, as a lecturer science and algebra</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">C.</font></b><b><input id="rdC253994" type="radio" name="name253994" onclick="return CheckKey('C',253994,0,'A',1,18524.2475835795)"></b></td>
+                    <td style="width: 91%">
+                        <font face="times" size="3" class="textQuestion">Giving science and algebra letures, Joan who teaches</font>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b> <font face="times" size="3" class="textQuestion">D.</font></b><b><input id="rdd253994" type="radio" name="name253994" onclick="return CheckKey('D',253994,0,'A',1,18524.2475835795)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">That Joan has been the science and algebra lecturer</font></td>
+                </tr>
+            </tbody>
+        </table><div id="Item253994" style="background-color:#f8f8f8;" align="center"></div><div id="BaiTap253994" style="display:none">
+            <table border="0" cellpadding="3" cellspacing="3" style="width: 100%; background-color:#f2f2f2;border-bottom:solid 1px #dddddd; ">
+                <tbody>
+                    <tr>
+                        <td style="padding-left:20px"> <span id="Key253994" style="padding:1px; font-weight:bold"></span></td>
+                        <td><a href="javascript:RegisterAnswer(253994)">ID:253994</a></td>
+
+                        <td style="color:#666666">Chưa phân loại</td>
+                        <td>
+                            <a href="javascript:ShowComment(253994)"><span> <span style="color:#333333;"> (0)</span> Lời giải &amp; Bình luận </span></a>
+                        </td>
+                        <td>
+                            <div id="div1" style=" font-size:8pt; color:Blue" align="right">
+                                <span id="SpanLikeName253994">
+                                    <a href="javascript:Like(253994);"> Theo dõi </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td style="padding-left:30px;padding-right:10px" align="right">
+                            <a href="javascript:ReportQuestion(253994)">Report</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Comment253994" style="background-color:#eceff5;"></div>
+    </div>
+</div>
+
+
+<div id="HiddenQuestionDivID253995" class="HiddenQuestionDivID">
+    <div id="Content253995" class="DivContent">
+        <table border="0" cellpadding="5" cellspacing="5" style="width: 100%; border-bottom:solid 1px #dddddd; ">
+            <tbody>
+                <tr valign="top"><td align="right"><b><font face="times" size="3" class="textQuestion"> Bài 11. </font></b></td><td style="width: 91%"> <font face="times" size="3" class="textQuestion"> It is very important ____________________ at least twice a day. </font> </td></tr>
+                <tr valign="top">
+                    <td align="right">
+                        <b><font face="times" size="3" class="textQuestion">A.</font></b><b><input id="rdA253995" type="radio" name="name253995" onclick="return CheckKey('A',253995,0,'A',1,18524.275714625)"></b>
+                    </td>
+                    <td style="width: 91%"> <font face="times" size="3" class="textQuestion">you brush your teeth</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">B.</font></b><b><input id="rdB253995" type="radio" name="name253995" onclick="return CheckKey('B',253995,0,'A',1,18524.275714625)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">that brush your teeth</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">C.</font></b><b><input id="rdC253995" type="radio" name="name253995" onclick="return CheckKey('C',253995,0,'A',1,18524.275714625)"></b></td>
+                    <td style="width: 91%">
+                        <font face="times" size="3" class="textQuestion">to brush your teeth</font>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b> <font face="times" size="3" class="textQuestion">D.</font></b><b><input id="rdd253995" type="radio" name="name253995" onclick="return CheckKey('D',253995,0,'A',1,18524.275714625)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">are teeth which you brush</font></td>
+                </tr>
+            </tbody>
+        </table><div id="Item253995" style="background-color:#f8f8f8;" align="center"></div><div id="BaiTap253995" style="display:none">
+            <table border="0" cellpadding="3" cellspacing="3" style="width: 100%; background-color:#f2f2f2;border-bottom:solid 1px #dddddd; ">
+                <tbody>
+                    <tr>
+                        <td style="padding-left:20px"> <span id="Key253995" style="padding:1px; font-weight:bold"></span></td>
+                        <td><a href="javascript:RegisterAnswer(253995)">ID:253995</a></td>
+
+                        <td style="color:#666666">Chưa phân loại</td>
+                        <td>
+                            <a href="javascript:ShowComment(253995)"><span> <span style="color:#333333;"> (1)</span> Lời giải &amp; Bình luận </span></a>
+                        </td>
+                        <td>
+                            <div id="div1" style=" font-size:8pt; color:Blue" align="right">
+                                <span id="SpanLikeName253995">
+                                    <a href="javascript:Like(253995);"> Theo dõi </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td style="padding-left:30px;padding-right:10px" align="right">
+                            <a href="javascript:ReportQuestion(253995)">Report</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Comment253995" style="background-color:#eceff5;"></div>
+    </div>
+</div>
+
+
+<div id="HiddenQuestionDivID253996" class="HiddenQuestionDivID">
+    <div id="Content253996" class="DivContent">
+        <table border="0" cellpadding="5" cellspacing="5" style="width: 100%; border-bottom:solid 1px #dddddd; ">
+            <tbody>
+                <tr valign="top"><td align="right"><b><font face="times" size="3" class="textQuestion"> Bài 12. </font></b></td><td style="width: 91%"> <font face="times" size="3" class="textQuestion"> Our planets ____________________ the sun. </font> </td></tr>
+                <tr valign="top">
+                    <td align="right">
+                        <b><font face="times" size="3" class="textQuestion">A.</font></b><b><input id="rdA253996" type="radio" name="name253996" onclick="return CheckKey('A',253996,0,'A',1,18524.303845615)"></b>
+                    </td>
+                    <td style="width: 91%"> <font face="times" size="3" class="textQuestion">revolving around</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">B.</font></b><b><input id="rdB253996" type="radio" name="name253996" onclick="return CheckKey('B',253996,0,'A',1,18524.303845615)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">that revolve around</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">C.</font></b><b><input id="rdC253996" type="radio" name="name253996" onclick="return CheckKey('C',253996,0,'A',1,18524.303845615)"></b></td>
+                    <td style="width: 91%">
+                        <font face="times" size="3" class="textQuestion">revolve around</font>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b> <font face="times" size="3" class="textQuestion">D.</font></b><b><input id="rdd253996" type="radio" name="name253996" onclick="return CheckKey('D',253996,0,'A',1,18524.303845615)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">are which revolve around</font></td>
+                </tr>
+            </tbody>
+        </table><div id="Item253996" style="background-color:#f8f8f8;" align="center"></div><div id="BaiTap253996" style="display:none">
+            <table border="0" cellpadding="3" cellspacing="3" style="width: 100%; background-color:#f2f2f2;border-bottom:solid 1px #dddddd; ">
+                <tbody>
+                    <tr>
+                        <td style="padding-left:20px"> <span id="Key253996" style="padding:1px; font-weight:bold"></span></td>
+                        <td><a href="javascript:RegisterAnswer(253996)">ID:253996</a></td>
+
+                        <td style="color:#666666">Chưa phân loại</td>
+                        <td>
+                            <a href="javascript:ShowComment(253996)"><span> <span style="color:#333333;"> (0)</span> Lời giải &amp; Bình luận </span></a>
+                        </td>
+                        <td>
+                            <div id="div1" style=" font-size:8pt; color:Blue" align="right">
+                                <span id="SpanLikeName253996">
+                                    <a href="javascript:Like(253996);"> Theo dõi </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td style="padding-left:30px;padding-right:10px" align="right">
+                            <a href="javascript:ReportQuestion(253996)">Report</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Comment253996" style="background-color:#eceff5;"></div>
+    </div>
+</div>
+
+
+<div id="HiddenQuestionDivID253997" class="HiddenQuestionDivID">
+    <div id="Content253997" class="DivContent">
+        <table border="0" cellpadding="5" cellspacing="5" style="width: 100%; border-bottom:solid 1px #dddddd; ">
+            <tbody>
+                <tr valign="top"><td align="right"><b><font face="times" size="3" class="textQuestion"> Bài 13. </font></b></td><td style="width: 91%"> <font face="times" size="3" class="textQuestion"> On Mars, __________ liquid water because the global average temperature is far too low. </font> </td></tr>
+                <tr valign="top">
+                    <td align="right">
+                        <b><font face="times" size="3" class="textQuestion">A.</font></b><b><input id="rdA253997" type="radio" name="name253997" onclick="return CheckKey('A',253997,0,'A',1,18524.3319765497)"></b>
+                    </td>
+                    <td style="width: 91%"> <font face="times" size="3" class="textQuestion">where no</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">B.</font></b><b><input id="rdB253997" type="radio" name="name253997" onclick="return CheckKey('B',253997,0,'A',1,18524.3319765497)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">is no</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">C.</font></b><b><input id="rdC253997" type="radio" name="name253997" onclick="return CheckKey('C',253997,0,'A',1,18524.3319765497)"></b></td>
+                    <td style="width: 91%">
+                        <font face="times" size="3" class="textQuestion">there is no</font>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b> <font face="times" size="3" class="textQuestion">D.</font></b><b><input id="rdd253997" type="radio" name="name253997" onclick="return CheckKey('D',253997,0,'A',1,18524.3319765497)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">no</font></td>
+                </tr>
+            </tbody>
+        </table><div id="Item253997" style="background-color:#f8f8f8;" align="center"></div><div id="BaiTap253997" style="display:none">
+            <table border="0" cellpadding="3" cellspacing="3" style="width: 100%; background-color:#f2f2f2;border-bottom:solid 1px #dddddd; ">
+                <tbody>
+                    <tr>
+                        <td style="padding-left:20px"> <span id="Key253997" style="padding:1px; font-weight:bold"></span></td>
+                        <td><a href="javascript:RegisterAnswer(253997)">ID:253997</a></td>
+
+                        <td style="color:#666666">Chưa phân loại</td>
+                        <td>
+                            <a href="javascript:ShowComment(253997)"><span> <span style="color:#333333;"> (2)</span> Lời giải &amp; Bình luận </span></a>
+                        </td>
+                        <td>
+                            <div id="div1" style=" font-size:8pt; color:Blue" align="right">
+                                <span id="SpanLikeName253997">
+                                    <a href="javascript:Like(253997);"> Theo dõi </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td style="padding-left:30px;padding-right:10px" align="right">
+                            <a href="javascript:ReportQuestion(253997)">Report</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Comment253997" style="background-color:#eceff5;"></div>
+    </div>
+</div>
+
+
+<div id="HiddenQuestionDivID253998" class="HiddenQuestionDivID">
+    <div id="Content253998" class="DivContent">
+        <table border="0" cellpadding="5" cellspacing="5" style="width: 100%; border-bottom:solid 1px #dddddd; ">
+            <tbody>
+                <tr valign="top"><td align="right"><b><font face="times" size="3" class="textQuestion"> Bài 14. </font></b></td><td style="width: 91%"> <font face="times" size="3" class="textQuestion"> A director _______________________________ in relation to a corporation. </font> </td></tr>
+                <tr valign="top">
+                    <td align="right">
+                        <b><font face="times" size="3" class="textQuestion">A.</font></b><b><input id="rdA253998" type="radio" name="name253998" onclick="return CheckKey('A',253998,0,'A',1,18524.3601074291)"></b>
+                    </td>
+                    <td style="width: 91%"> <font face="times" size="3" class="textQuestion">who has numerous responsibilities</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">B.</font></b><b><input id="rdB253998" type="radio" name="name253998" onclick="return CheckKey('B',253998,0,'A',1,18524.3601074291)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">who is &nbsp;responsible</font></td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b><font face="times" size="3" class="textQuestion">C.</font></b><b><input id="rdC253998" type="radio" name="name253998" onclick="return CheckKey('C',253998,0,'A',1,18524.3601074291)"></b></td>
+                    <td style="width: 91%">
+                        <font face="times" size="3" class="textQuestion">numerous responsibilities of whom</font>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="right"><b> <font face="times" size="3" class="textQuestion">D.</font></b><b><input id="rdd253998" type="radio" name="name253998" onclick="return CheckKey('D',253998,0,'A',1,18524.3601074291)"></b></td>
+                    <td style="width: 91%"><font face="times" size="3" class="textQuestion">may have numerous responsibilities</font></td>
+                </tr>
+            </tbody>
+        </table><div id="Item253998" style="background-color:#f8f8f8;" align="center"></div><div id="BaiTap253998" style="display:none">
+            <table border="0" cellpadding="3" cellspacing="3" style="width: 100%; background-color:#f2f2f2;border-bottom:solid 1px #dddddd; ">
+                <tbody>
+                    <tr>
+                        <td style="padding-left:20px"> <span id="Key253998" style="padding:1px; font-weight:bold"></span></td>
+                        <td><a href="javascript:RegisterAnswer(253998)">ID:253998</a></td>
+
+                        <td style="color:#666666">Chưa phân loại</td>
+                        <td>
+                            <a href="javascript:ShowComment(253998)"><span> <span style="color:#333333;"> (7)</span> Lời giải &amp; Bình luận </span></a>
+                        </td>
+                        <td>
+                            <div id="div1" style=" font-size:8pt; color:Blue" align="right">
+                                <span id="SpanLikeName253998">
+                                    <a href="javascript:Like(253998);"> Theo dõi </a>
+                                </span>
+                            </div>
+                        </td>
+                        <td style="padding-left:30px;padding-right:10px" align="right">
+                            <a href="javascript:ReportQuestion(253998)">Report</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="Comment253998" style="background-color:#eceff5;"></div>
+    </div>
 </div>
