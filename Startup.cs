@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.SpaServices.Webpack;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using StudyMaster.Data;
 using StudyMaster.Infrastructure;
 
 namespace StudyMaster
@@ -25,6 +27,9 @@ namespace StudyMaster
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            string conString = Configuration["ConnectionStrings:DefaultConnection"];
+            services.AddDbContext<EFDataContext>(options => options.UseSqlServer(conString));
 
             services.Configure<RazorViewEngineOptions>(options =>
             {
