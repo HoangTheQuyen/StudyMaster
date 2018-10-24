@@ -1,19 +1,15 @@
 <template>
-<div>
-    <h1>Welcome to Hands on Vue.js with ASP.NET Core!</h1>
-    <p>
-        The time is: {{ time }}
-    </p>
-</div>
+    <div>
+        <topic-list />
+    </div>
 </template>
 
 <script>
-export default {
-    name: 'app',
-    data() {
-        return {
-            time: new Date().toString()
+    import TopicList from "./topics/List.vue";
+    export default {
+        name: "app",
+        components: {
+            TopicList
         }
-    }
-}
+    };
 </script>

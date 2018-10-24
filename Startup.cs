@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using StudyMaster.Data;
+using StudyMaster.Data.Entities;
 using StudyMaster.Infrastructure;
 
 namespace StudyMaster
@@ -31,10 +33,16 @@ namespace StudyMaster
             string conString = Configuration["ConnectionStrings:DefaultConnection"];
             services.AddDbContext<EFDataContext>(options => options.UseSqlServer(conString));
 
+            services.AddIdentity<AppUser, AppRole>()
+                    .AddEntityFrameworkStores<EFDataContext>()
+                    .AddDefaultTokenProviders();
+
             services.Configure<RazorViewEngineOptions>(options =>
             {
                 options.ViewLocationExpanders.Add(new FeatureLocationExpander());
             });
+
+            DbContextExtentions.UserManager = services.BuildServiceProvider().GetService<UserManager<AppUser>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -9,5 +9,5 @@ const routes = [
 new Vue({
     el: '#app-root',
     router: new VueRouter({ mode: 'history', routes: routes }),
-    render: h => h(require('./components/app.vue'))
+    render: h => h(require('./components/App.vue'))
 });
