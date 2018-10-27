@@ -8,7 +8,6 @@ namespace StudyMaster.Data.Entities
         public AppRole(string name)
         {
             Name = name;
-            
         }
     }
 }

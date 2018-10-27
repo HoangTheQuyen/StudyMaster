@@ -41,8 +41,6 @@ namespace StudyMaster
             {
                 options.ViewLocationExpanders.Add(new FeatureLocationExpander());
             });
-
-            DbContextExtentions.UserManager = services.BuildServiceProvider().GetService<UserManager<AppUser>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

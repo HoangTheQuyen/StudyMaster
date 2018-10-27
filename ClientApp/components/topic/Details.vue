@@ -1,19 +1,22 @@
 <template>
-<div class="details">
-    <h1>{{ topic.name }}</h1>
+<b-container class="pt-4">
+    <b-media>
+        <img slot="aside" :src="a" :alt="topic.name" />
+        <h2>{{ topic.name }}</h2>
 
-    <img :src="topic.thumbnail" :alt="topic.name" />
-
-    <p>{{ topic.lectureContent }}</p>
-</div>
+    </b-media>
+    <h3 class="mt-4">Topic details</h3>
+    <p class="mt-4 mb-4">
+        {{ topic.lectureContent }}
+    </p>
+</b-container>
 </template>
 
 <script>
 export default {
     name: "topic-details",
-    
     props: {
-       topic: {
+        topic: {
             type: Object,
             required: true
         }
@@ -22,7 +25,7 @@ export default {
 </script>
 
 <style>
-    .details {
-        padding: 20px;
-    }
+.details {
+    padding: 20px;
+}
 </style>

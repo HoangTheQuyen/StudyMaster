@@ -1,5 +1,7 @@
 <template>
-    <topic-details :topic="topic"  />
+<div class="page">
+    <topic-details :topic="topic" />
+</div>
 </template>
 
 <script>
@@ -19,16 +21,21 @@ export default {
         };
     },
 
-    mounted(){
-        const slug = this.$route.params.slug;
+     beforeRouteEnter(to, from, next) {
+        
+        fetch(`/api/topics/${to.params.slug}`)
+            .then(response => {
+                return response.json();
+            })
+            .then(topic => {
+                next(vm => vm.setData(topic));
+            });
+    },
 
-        fetch(`api/topics/${slug}`)
-        .then(response => {
-            return response.json();
-        })
-        .then(topic =>{
+    methods: {
+        setData(topic) {
             this.topic = topic;
-        })
+        }
     }
 }
 </script>

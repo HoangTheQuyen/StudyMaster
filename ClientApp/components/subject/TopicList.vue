@@ -1,28 +1,24 @@
 <template>
 <div class="topics">
-    <h1>Topics</h1>
+    <b-container>
+        <h1 class="mt-4 mb-4">Topics</h1>
+        
+        <b-row>
+            <b-col class="mb-4" sm="6" v-for="topic in topics" :key="topic.id">
 
-    <div class="list">
-        <div class="item" v-for="topic in topics" :key="topic.slug">
+                <b-media class="topic">
+                    <img slot="aside" v-bind:src="a" :alt="topic.name" @click="view(topic)" />
 
-            <h3 @click="select(topic)">{{ topic.name }}</h3>
+                    <h2 class="mt-2" @click="view(topic)">{{ topic.name }}</h2>
+                </b-media>
 
-            <img :src="topic.thumbnail" :alt="topic.name" @click="select(topic)" />
-
-            <p @click="select(topic)">
-                    {{ topic.lectureContent }}
-            </p>
-
-            <hr />
-
-        </div>
-    </div>
-
+            </b-col>
+        </b-row>
+    </b-container>
 </div>
 </template>
 
 <script>
-
 export default {
     name: "topic-list",
 
@@ -34,7 +30,7 @@ export default {
     },
 
     methods: {
-        select(topic) {
+        view(topic) {
             this.$router.push(`/topics/${topic.slug}`);
         }
     }
@@ -42,36 +38,14 @@ export default {
 };
 </script>
 
-<style>
-* {
-    box-sizing: border-box !important;
-}
 
-.topics {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+<style lang="scss" scoped>
+.topic {
+    border: 3px solid #eee;
 
-.list,
-.details {
-    width: 50%;
-    float: left;
-}
-
-.list .item {
-    width: 50%;
-    float: left;
-    padding: 20px 10px 20px 0;
-}
-
-.list img,
-.list h3,
-.list p {
-    cursor: pointer;
-}
-
-.list img {
-    width: 100px;
+    img,
+    h2 {
+        cursor: pointer;
+    }
 }
 </style>

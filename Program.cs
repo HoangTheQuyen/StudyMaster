@@ -20,10 +20,10 @@ namespace StudyMaster
             var host = BuildWebHost(args);
             using (var scope = host.Services.CreateScope())
             {
-                var services = scope.ServiceProvider;
-                var dbContext = services.GetRequiredService<EFDataContext>();
-                dbContext.Database.Migrate();
-                dbContext.EnsureSeeded();
+                //var services = scope.ServiceProvider;
+                //var dbContext = services.GetRequiredService<EFDataContext>();
+                //dbContext.Database.Migrate();
+                //dbContext.EnsureSeeded();
             }
             host.Run();
         }

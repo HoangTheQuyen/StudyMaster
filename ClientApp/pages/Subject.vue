@@ -1,31 +1,39 @@
 <template>
+<div class="page">
     <topic-list :topics="topics" />
+</div>
 </template>
 
 <script>
-    import TopicList from "../components/subject/TopicList.vue";
-    
-    export default {
-        name: "topiclist",
+import TopicList from "../components/subject/TopicList.vue";
 
-        data() {
-            return {
-                topics: []
-            };
-        },
+export default {
+    name: "topiclist",
 
-        mounted() {
-            fetch("/api/topics")
-                .then(response => {
-                    return response.json();
-                })
-                .then(topics => {
-                    this.topics = topics;
-                });
-        },
+    data() {
+        return {
+            topics: []
+        };
+    },
 
-        components: {
-            TopicList
+    beforeRouteEnter(to, from, next) {
+        fetch("/api/topics")
+            .then(response => {
+                return response.json();
+            })
+            .then(topics => {
+                next(vm => vm.setData(topics));
+            });
+    },
+
+    methods: {
+        setData(topics) {
+            this.topics = topics;
         }
-    };
+    },
+
+    components: {
+        TopicList
+    }
+};
 </script>
