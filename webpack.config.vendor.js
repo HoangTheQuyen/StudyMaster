@@ -17,7 +17,10 @@ module.exports = (env) => {
                 'isomorphic-fetch',
                 'jquery',
                 'vue',
-                'vue-router'
+                'vue-router',
+                'bootstrap/dist/css/bootstrap.min.css',
+                'bootstrap-vue',
+                'nprogress/nprogress.css'
             ],
         },
         module: {

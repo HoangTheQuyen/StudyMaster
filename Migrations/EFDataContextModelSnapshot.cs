@@ -180,10 +180,93 @@ namespace StudyMaster.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("StudyMaster.Data.Entities.Exam", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Exams");
+                });
+
+            modelBuilder.Entity("StudyMaster.Data.Entities.Image", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Url")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Images");
+                });
+
+            modelBuilder.Entity("StudyMaster.Data.Entities.Question", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("AContent")
+                        .IsRequired();
+
+                    b.Property<string>("BContent")
+                        .IsRequired();
+
+                    b.Property<string>("CContent")
+                        .IsRequired();
+
+                    b.Property<string>("Content")
+                        .IsRequired();
+
+                    b.Property<long>("CorrectAnswer");
+
+                    b.Property<string>("DContent")
+                        .IsRequired();
+
+                    b.Property<long>("ExamId");
+
+                    b.Property<string>("Explain")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ExamId");
+
+                    b.ToTable("Questions");
+                });
+
+            modelBuilder.Entity("StudyMaster.Data.Entities.Subject", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description")
+                        .IsRequired();
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.Property<string>("Thumbnail")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Subjects");
+                });
+
             modelBuilder.Entity("StudyMaster.Data.Entities.Topic", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<long?>("ExamId");
+
+                    b.Property<long>("ImageId");
 
                     b.Property<string>("LectureContent")
                         .IsRequired();
@@ -194,13 +277,21 @@ namespace StudyMaster.Migrations
                     b.Property<string>("Slug")
                         .IsRequired();
 
-                    b.Property<string>("Thumbnail")
-                        .IsRequired();
+                    b.Property<long>("SubjectId");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ExamId")
+                        .IsUnique()
+                        .HasFilter("[ExamId] IS NOT NULL");
+
+                    b.HasIndex("ImageId")
+                        .IsUnique();
+
                     b.HasIndex("Slug")
                         .IsUnique();
+
+                    b.HasIndex("SubjectId");
 
                     b.ToTable("Topics");
                 });
@@ -247,6 +338,31 @@ namespace StudyMaster.Migrations
                     b.HasOne("StudyMaster.Data.Entities.AppUser")
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("StudyMaster.Data.Entities.Question", b =>
+                {
+                    b.HasOne("StudyMaster.Data.Entities.Exam", "Exam")
+                        .WithMany("Questions")
+                        .HasForeignKey("ExamId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("StudyMaster.Data.Entities.Topic", b =>
+                {
+                    b.HasOne("StudyMaster.Data.Entities.Exam", "Exam")
+                        .WithOne("Topic")
+                        .HasForeignKey("StudyMaster.Data.Entities.Topic", "ExamId");
+
+                    b.HasOne("StudyMaster.Data.Entities.Image", "Image")
+                        .WithOne("Topic")
+                        .HasForeignKey("StudyMaster.Data.Entities.Topic", "ImageId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("StudyMaster.Data.Entities.Subject", "Subject")
+                        .WithMany("Topics")
+                        .HasForeignKey("SubjectId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

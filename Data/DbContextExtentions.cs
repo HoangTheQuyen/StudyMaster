@@ -21,7 +21,6 @@ namespace StudyMaster.Data
 
                          Slug = "Chu-De-So-1",
 
-                         Thumbnail = "http://placehold.it/200x300",
 
                          LectureContent = @"Lorem ipsum dolor sit amet consectetur adipisicing elit.
                          Perferendis tempora ad cum laudantium, omnis fugit amet iure animi corporis labore
