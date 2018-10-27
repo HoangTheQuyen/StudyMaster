@@ -3,7 +3,13 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
+import Subject from "./pages/Subject.vue";
+import Topic from "./pages/Topic.vue";
+
 const routes = [
+    { path: "/topics", component: Subject },
+    { path: "/topics/:slug", component: Topic },
+    { path: "*", redirect: "/topics" }
 ];
 
 new Vue({

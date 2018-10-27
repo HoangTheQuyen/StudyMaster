@@ -11,6 +11,7 @@
 <script>
 export default {
     name: "topic-details",
+    
     props: {
        topic: {
             type: Object,
@@ -19,3 +20,9 @@ export default {
     }
 };
 </script>
+
+<style>
+    .details {
+        padding: 20px;
+    }
+</style>

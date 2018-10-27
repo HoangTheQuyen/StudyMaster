@@ -1,15 +1,9 @@
 <template>
-    <div>
-        <topic-list />
-    </div>
+    <router-view /> 
 </template>
 
 <script>
-    import TopicList from "./topics/List.vue";
-    export default {
-        name: "app",
-        components: {
-            TopicList
-        }
-    };
+export default {
+    name:"app"
+}
 </script>
