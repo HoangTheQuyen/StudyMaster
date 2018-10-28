@@ -1,7 +1,7 @@
 <template>
 <b-container class="pt-4">
     <b-media>
-        <img slot="aside" :src="a" :alt="topic.name" />
+        <img slot="aside" :src="topic.thumbnail" :alt="topic.name" />
         <h2>{{ topic.name }}</h2>
 
     </b-media>

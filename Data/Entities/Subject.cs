@@ -13,5 +13,6 @@ namespace StudyMaster.Data.Entities
         [Required]
         public string Name { get; set; }
         public List<Topic> Topics { get; set; } = new List<Topic>();
+        public List<Exam> Exams { get; set; } = new List<Exam>();
     }
 }

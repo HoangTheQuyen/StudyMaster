@@ -1,21 +1,15 @@
 <template>
-<div class="topics">
-    <b-container>
-        <h1 class="mt-4 mb-4">Topics</h1>
-        
-        <b-row>
+    <div class="topics">
+        <b-row class="mt-4">
             <b-col class="mb-4" sm="6" v-for="topic in topics" :key="topic.id">
-
                 <b-media class="topic">
-                    <img slot="aside" v-bind:src="a" :alt="topic.name" @click="view(topic)" />
+                    <img slot="aside" :src="topic.thumbnail" :alt="topic.name" @click="view(topic)" />
 
-                    <h2 class="mt-2" @click="view(topic)">{{ topic.name }}</h2>
+                    <h2 class="mt-2" @click="view(topic)">{{ topic.name }} </h2>
                 </b-media>
-
             </b-col>
         </b-row>
-    </b-container>
-</div>
+    </div>
 </template>
 
 <script>

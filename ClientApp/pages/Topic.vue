@@ -7,6 +7,7 @@
 <script>
 
 import TopicDetails from "../components/topic/Details.vue";
+import axios from "axios";
 
 export default {
     name: "topic",
@@ -21,14 +22,9 @@ export default {
         };
     },
 
-     beforeRouteEnter(to, from, next) {
-        
-        fetch(`/api/topics/${to.params.slug}`)
-            .then(response => {
-                return response.json();
-            })
-            .then(topic => {
-                next(vm => vm.setData(topic));
+        beforeRouteEnter(to, from, next) {
+            axios.get(`/api/topics/${to.params.slug}`).then(response => {
+                next(vm => vm.setData(response.data));
             });
     },
 

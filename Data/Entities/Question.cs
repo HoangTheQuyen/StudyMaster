@@ -20,7 +20,6 @@ namespace StudyMaster.Data.Entities
         [Required]
         public string DContent { get; set; }
         public long ExamId { get; set; }
-        public Exam Exam
-         { get; set; }
+        public Exam Exam { get; set; }
     }
 }

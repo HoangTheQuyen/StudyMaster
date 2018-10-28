@@ -188,22 +188,16 @@ namespace StudyMaster.Migrations
                     b.Property<string>("Description")
                         .IsRequired();
 
-                    b.HasKey("Id");
+                    b.Property<long>("SubjectId");
 
-                    b.ToTable("Exams");
-                });
-
-            modelBuilder.Entity("StudyMaster.Data.Entities.Image", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Url")
+                    b.Property<string>("Thumbnail")
                         .IsRequired();
 
                     b.HasKey("Id");
 
-                    b.ToTable("Images");
+                    b.HasIndex("SubjectId");
+
+                    b.ToTable("Exams");
                 });
 
             modelBuilder.Entity("StudyMaster.Data.Entities.Question", b =>
@@ -266,8 +260,6 @@ namespace StudyMaster.Migrations
 
                     b.Property<long?>("ExamId");
 
-                    b.Property<long>("ImageId");
-
                     b.Property<string>("LectureContent")
                         .IsRequired();
 
@@ -279,14 +271,14 @@ namespace StudyMaster.Migrations
 
                     b.Property<long>("SubjectId");
 
+                    b.Property<string>("Thumbnail")
+                        .IsRequired();
+
                     b.HasKey("Id");
 
                     b.HasIndex("ExamId")
                         .IsUnique()
                         .HasFilter("[ExamId] IS NOT NULL");
-
-                    b.HasIndex("ImageId")
-                        .IsUnique();
 
                     b.HasIndex("Slug")
                         .IsUnique();
@@ -341,6 +333,14 @@ namespace StudyMaster.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("StudyMaster.Data.Entities.Exam", b =>
+                {
+                    b.HasOne("StudyMaster.Data.Entities.Subject", "Subject")
+                        .WithMany("Exams")
+                        .HasForeignKey("SubjectId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("StudyMaster.Data.Entities.Question", b =>
                 {
                     b.HasOne("StudyMaster.Data.Entities.Exam", "Exam")
@@ -354,11 +354,6 @@ namespace StudyMaster.Migrations
                     b.HasOne("StudyMaster.Data.Entities.Exam", "Exam")
                         .WithOne("Topic")
                         .HasForeignKey("StudyMaster.Data.Entities.Topic", "ExamId");
-
-                    b.HasOne("StudyMaster.Data.Entities.Image", "Image")
-                        .WithOne("Topic")
-                        .HasForeignKey("StudyMaster.Data.Entities.Topic", "ImageId")
-                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("StudyMaster.Data.Entities.Subject", "Subject")
                         .WithMany("Topics")
