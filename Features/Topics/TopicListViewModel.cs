@@ -12,5 +12,6 @@ namespace StudyMaster.Features.Topics
         public string Name { get; set; }
         public string Thumbnail { get; set; }
         public string LectureContent { get; set; }
+        public string ExamSlug { get; set; }
     }
 }

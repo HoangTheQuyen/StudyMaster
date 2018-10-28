@@ -8,19 +8,31 @@ Vue.use(BootstrapVue);
 
 import Subject from "./pages/Subject.vue";
 import Topic from "./pages/Topic.vue";
+import Exam from "./pages/Exam.vue";
+import Examination from "./pages/Examination.vue";
 
-const routes = [{
-        path: "/topics",
-        component: Subject
+const routes = [
+    {
+        path:"/topics",
+        component:Subject
     },
     {
-        path: "/topics/:slug",
+        path:"/exams",
+        component:Exam
+    },
+    {
+        path:"/topics/:slug",
         component: Topic
+    },
+    {
+        path:"/exams/:slug",
+        component: Examination
     },
     {
         path: "*",
         redirect: "/topics"
     }
+
 ];
 
 const router = new VueRouter({

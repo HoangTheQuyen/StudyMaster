@@ -26,7 +26,8 @@ namespace StudyMaster.Features.Topics
                                           Slug = x.Slug,
                                           Name = x.Name,
                                           Thumbnail = x.Thumbnail,
-                                          LectureContent = x.LectureContent
+                                          LectureContent = x.LectureContent,
+                                          ExamSlug = x.Exam.Slug
                                       })
                                       .ToListAsync();
 

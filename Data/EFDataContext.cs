@@ -17,6 +17,10 @@ namespace StudyMaster.Data
             modelBuilder.Entity<Topic>()
                         .HasIndex(b => b.Slug)
                         .IsUnique();
+
+            modelBuilder.Entity<Exam>()
+                        .HasIndex(b => b.Slug)
+                        .IsUnique();
         }
     }
 }

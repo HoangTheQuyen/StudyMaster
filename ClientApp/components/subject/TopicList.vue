@@ -10,7 +10,7 @@
                         <br />
                         <br />
                         <b-button variant="success" @click="view(topic)">Xem Bài Giảng</b-button>
-                        <b-button variant="primary">Thi Online</b-button>
+                        <b-button variant="primary" @click="examiation(topic)">Thi Online</b-button>
                     </div>
                 </b-media>
             </b-col>
@@ -32,6 +32,9 @@ export default {
     methods: {
         view(topic) {
             this.$router.push(`/topics/${topic.slug}`);
+        },
+        examiation(topic){
+            this.$router.push(`/exams/${topic.examSlug}`);
         }
     }
 

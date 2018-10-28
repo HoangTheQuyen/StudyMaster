@@ -9,6 +9,7 @@
             <b-collapse is-nav id="nav_collapse">
                 <b-navbar-nav>
                     <b-nav-item to="/topics">Topics</b-nav-item>
+                    <b-nav-item to="/exams">Exams</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
 

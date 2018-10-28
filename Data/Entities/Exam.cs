@@ -10,6 +10,10 @@ namespace StudyMaster.Data.Entities
         public string Description { get; set; }
         [Required]
         public string Thumbnail { get; set; }
+        [Required]
+        public string Slug { get; set; }
+        [Required]
+        public string Type { get; set; }
         public long SubjectId { get; set; }
         public Subject Subject { get; set; }
         public Topic Topic { get; set; }
