@@ -11,9 +11,10 @@ using System;
 namespace StudyMaster.Migrations
 {
     [DbContext(typeof(EFDataContext))]
-    partial class EFDataContextModelSnapshot : ModelSnapshot
+    [Migration("20181028083358_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -188,21 +189,12 @@ namespace StudyMaster.Migrations
                     b.Property<string>("Description")
                         .IsRequired();
 
-                    b.Property<string>("Slug")
-                        .IsRequired();
-
                     b.Property<long>("SubjectId");
 
                     b.Property<string>("Thumbnail")
                         .IsRequired();
 
-                    b.Property<string>("Type")
-                        .IsRequired();
-
                     b.HasKey("Id");
-
-                    b.HasIndex("Slug")
-                        .IsUnique();
 
                     b.HasIndex("SubjectId");
 

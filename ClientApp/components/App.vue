@@ -1,19 +1,36 @@
 <template>
-<div>
-    <h1>Welcome to Hands on Vue.js with ASP.NET Core!</h1>
-    <p>
-        The time is: {{ time }}
-    </p>
+<div class="app">
+    <b-navbar toggleable="md" type="dark" variant="dark">
+        <b-container>
+            <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+
+            <b-navbar-brand to="/">StudyMaster</b-navbar-brand>
+
+            <b-collapse is-nav id="nav_collapse">
+                <b-navbar-nav>
+                    <b-nav-item to="/topics">Topics</b-nav-item>
+                    <b-nav-item to="/exams">Exams</b-nav-item>
+                </b-navbar-nav>
+            </b-collapse>
+
+        </b-container>
+    </b-navbar>
+
+    <transition name="fade" mode="out-in">
+        <router-view />
+    </transition>
+
 </div>
 </template>
 
-<script>
-export default {
-    name: 'app',
-    data() {
-        return {
-            time: new Date().toString()
-        }
-    }
+<style lang="scss">
+html,
+body {
+    height: 100vh;
 }
-</script>
+
+div.app,
+div.page {
+    height: 100% !important;
+}
+</style>

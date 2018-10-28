@@ -8,9 +8,9 @@ namespace StudyMaster.Data.Entities
         [Required]
         public string Content { get; set; }
         [Required]
-        public string explain { get; set; }
+        public long CorrectAnswer { get; set; }
         [Required]
-        public int CorrectAnswer { get; set; }
+        public string Explain { get; set; }
         [Required]
         public string AContent { get; set; }
         [Required]
@@ -19,8 +19,7 @@ namespace StudyMaster.Data.Entities
         public string CContent { get; set; }
         [Required]
         public string DContent { get; set; }
-
-        public Exam Exam { get; set; }
         public long ExamId { get; set; }
+        public Exam Exam { get; set; }
     }
 }
