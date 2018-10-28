@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div class="topics">
         <b-row class="mt-4">
             <b-col class="mb-4" sm="6" v-for="topic in topics" :key="topic.id">
@@ -6,6 +6,12 @@
                     <img slot="aside" :src="topic.thumbnail" :alt="topic.name" @click="view(topic)" />
 
                     <h2 class="mt-2" @click="view(topic)">{{ topic.name }} </h2>
+                    <div>
+                        <br />
+                        <br />
+                        <b-button variant="success" @click="view(topic)">Xem Bài Giảng</b-button>
+                        <b-button variant="primary">Thi Online</b-button>
+                    </div>
                 </b-media>
             </b-col>
         </b-row>
