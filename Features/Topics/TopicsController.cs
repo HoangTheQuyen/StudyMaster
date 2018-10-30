@@ -14,11 +14,18 @@ namespace StudyMaster.Features.Topics
         public TopicsController(EFDataContext ctx) => context = ctx;
 
         [HttpGet]
-        public async Task<IActionResult> Find(string subjects)
+        public async Task<IActionResult> Find(string q, string subjects)
         {
             var Subjects = string.IsNullOrEmpty(subjects) ? new List<string>() : subjects.Split('|').ToList();
+            var Query = $"%{q?.ToLower()}%";
 
             var topics = await context.Topics
+                                      .Where(x => string.IsNullOrEmpty(q) ||
+                                        (
+                                            EF.Functions.Like(x.Name.ToLower(), Query) ||
+                                            EF.Functions.Like(x.Slug.ToLower(), Query) ||
+                                            EF.Functions.Like(x.LectureContent.ToLower(), Query) 
+                                        ))
                                       .Where(x => Subjects.Any() == false || Subjects.Contains(x.Subject.Name))
                                       .Select(x => new TopicListViewModel
                                       {
