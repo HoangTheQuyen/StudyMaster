@@ -1,0 +1,3 @@
+C:\Users\ngoc\Desktop\backupfile\QLDA\StudyMaster\obj\Debug\netcoreapp2.0\StudyMaster.csproj.CoreCompileInputs.cache
+C:\Users\ngoc\Desktop\backupfile\QLDA\StudyMaster\obj\Debug\netcoreapp2.0\StudyMaster.AssemblyInfoInputs.cache
+C:\Users\ngoc\Desktop\backupfile\QLDA\StudyMaster\obj\Debug\netcoreapp2.0\StudyMaster.AssemblyInfo.cs

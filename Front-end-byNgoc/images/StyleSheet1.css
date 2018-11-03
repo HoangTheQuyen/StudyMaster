@@ -1,0 +1,597 @@
+﻿
+
+.CmDiv
+{
+    background-color:#eceff5;
+     border:solid 1px #ffffff;
+     width:99% ;
+   
+}
+.CmDivC
+{
+   font-size:7pt;
+    padding-top:3px;
+    color:#777777;
+ }
+
+.CmImag
+{
+  
+  height:32px;
+     width:32px;
+    border:solid 1px #dddddd;
+ }
+ 
+  .CmJoin
+{
+   color:#920be7;
+   padding-left:30px;
+   padding:5px;
+    font-weight:bold;
+ }
+ 
+ .CmB
+{
+   color:#244892;
+   font-size:12px;
+ }
+
+.CmTb
+{
+  
+  margin:0;
+ font-size:13px;
+  border:0;
+  width:100%;
+
+ 
+}
+
+.CmDIVC
+{
+ background-color:#eceff5;
+ border:solid 1px #ffffff;
+}
+.ImgC
+{
+ background-color:#eceff5;
+ border:solid 1px #ffffff;
+ width:20px;
+ height:20px;
+}
+.BCm
+{
+font-size:12px;
+color:#244892;
+}
+.fcm
+{
+font-size:12px;
+
+}
+
+
+
+.CS
+{
+    padding-right: 2px; padding-left: 2px; padding-bottom: 2px; 
+            padding-top: 2px; font-size:12px;
+}
+.C
+{
+    padding-right: 2px; padding-left: 2px; padding-bottom: 2px; width: 420px;
+            padding-top: 2px
+}
+.CB
+
+{
+    padding-right: 3px; padding-left: 3px; padding-bottom: 3px; border-left: #4169e1 2px solid;
+    width: 420px;  font-weight:bold;
+}
+
+.sC
+{
+    padding-right: 2px; padding-left: 2px; font-weight: bold; padding-bottom: 2px;
+                color: blue; padding-top: 2px
+}
+
+body 
+{
+	  margin:0;
+	
+	  font-family:Arial; font-size:13px;
+	  color:#2c2c2c;
+	  
+	  
+}
+
+table{font-family:Arial; font-size:13px;}
+div{font-family:Arial; font-size:13px;}
+.tbVotes
+{
+	 
+	  
+}
+.PagingDefault
+{
+	font-size:15px;
+}
+.Selected
+{
+	color:Red;
+}
+.sMenu
+{
+	 
+	
+	  font-family:Arial;
+	  font-size:11px;
+	  font-weight:600;
+	  
+	  
+	  
+}
+
+.StartID
+{
+    background-image: url(../Fifa1/Images/old_trafford_1_1024x768.jpg);
+  background-repeat:repeat-x;
+	 height:24px;
+	 
+	
+}
+.TabaleTabH
+{
+    background-image: url(../Images/MenuHeader/bgMenu.jpg);
+  background-repeat:repeat-x;
+	 height:24px;
+	 
+	
+}
+.bgMenu
+{
+	 background-image: url(../Images/MenuHeader/bgMenu.jpg);
+	  background-repeat:repeat-x;
+	 color:#013660;
+	 height:34px;
+	 
+	  
+	text-transform:uppercase;
+	
+	font-weight:bold;
+}
+.sLeftMenu
+{
+	border-bottom:dotted 1pt #cfd4da;
+	 font-size:11px;
+	   position:relative;
+	   margin-bottom:-1px;
+	
+	font-weight:bold;
+	  
+}
+.hLeftMenu
+{
+	  
+	
+	color:#000000;
+}
+.dMenu
+{
+	border:solid 1pt #cfd4da;
+	 color:#013660;
+	
+	  
+	
+}
+.dMenu
+{
+	border-bottom:solid 1pt #cfd4da;
+}
+
+.bgFirstMenu
+{
+	 height:30px;
+	/*background-image: url(../Images/MenuHeader/bgMenu.jpg);*/
+	  background-repeat:repeat-x;
+	  background-color:#017ebe;
+	 color:#c3dbed;
+	 font-size:12px;
+	  
+	font-weight:bold;
+}
+
+.bgOffice
+{
+	 height:28px;
+	 background-image: url(../Images/Icons/bgOffice.jpg);
+	  background-repeat:repeat-x;
+	 color:#003561;
+	
+	  
+	text-transform:uppercase;
+	
+	font-weight:bold;
+}
+
+.bgSearch
+{
+	 height:137px;
+	 background-image: url(../Images/Icons/bgSearch.jpg);
+	  background-repeat:repeat-x;
+	 color:#003561;
+		text-transform:uppercase;
+	
+	  
+  width: 100%;
+	font-weight:bold;
+	border:solid 1pt #c0c2c1;
+	
+}
+.Title
+{
+	height:25px;
+	 background-image: url(../Images/Icons/bgTitle.jpg);
+	 background-repeat:repeat-x;
+	 color:#333333;
+	text-transform:uppercase;
+   width : 100%;
+	font-weight:bold;
+
+}
+.NewsList
+{	border-bottom:dotted 1pt #dddddd;
+	 width:100%;
+	 padding-top:14px;
+	 padding-bottom:14px;
+	 font-size:11px;
+	  
+}
+
+
+.NewsEvent
+{
+	
+	 width:100%;
+	 padding-top:14px;
+	 padding-bottom:14px;
+	 font-size:11px;
+}
+ A
+{ 
+   COLOR: #017ebe; 
+  
+	  font-size:13px;
+    text-decoration:none;
+} 
+
+A:hover
+{	text-decoration:underline;
+	   font-size:13px;
+	   color:#2d7eb6;
+}
+
+.NewsTitle a
+{ 
+   COLOR: #6d6d6d; 
+  
+   
+	  
+    text-decoration:none;
+} 
+
+.NewsTitle a:hover
+{ COLOR:#92cfff; 
+	  
+}
+.TextTitle
+{
+      
+	  
+	color:#691eb3;
+	font-weight:bold;
+	padding-top:10px;
+	padding-bottom:5px;
+	
+}
+
+.bgFooter
+{
+	  
+	 background-image: url(../Images/Icons/bgFooter.jpg);
+	  background-repeat:repeat-x;
+	 color:#013660;
+	 
+	 border: solid 1px #c8c8c8;
+	
+}
+.textVisite
+{
+	  
+	color:#f05000;
+	font-weight:bold;
+}
+.Adv
+{
+	  
+	border: 1px solid #dfdfdf;
+	 padding-top:10px;
+	 padding-bottom:10px;
+	
+	 
+}
+
+.AdvLeft
+{
+	  
+	border: 1px solid #dfdfdf;
+	 padding-top:6px;
+	 padding-bottom:4px;
+	 width:100%;
+	 
+}
+.Vote
+{
+	border:solid 1pt #cfd4da;
+	  background-color:#ffffff;
+}
+.hotNews
+{ 
+	  
+	COLOR:#000000; 
+}
+.hotNews a:hover
+{ COLOR:#92cfff; 
+	  
+}
+.bgHeader
+{ background-image: url(../Images/Icons/bgHeader.jpg);
+	  background-repeat:repeat-x;
+	   width:100%;
+	  
+	
+	
+}
+
+.AdvFooter
+{
+	background-image: url(../Images/Icons/bg_Footer.jpg);
+	  background-repeat:repeat-x;
+}
+.NewsAndEvent
+{
+	
+	/**border-bottom:solid 1px #ebebeb; border-left:solid 1px #ebebeb; border-right:solid 1px #ebebeb;**/
+}
+.RightTitle
+{
+	height:29px;
+	 background-image: url(http://moon.vn/Images/Icons/bgRightTilte.jpg);
+	 background-repeat:repeat-x;
+	 color:#333333;
+   width : 100%;
+	font-weight:bold;
+	border-left:solid 1pt #c2c2c2;
+	border-right:solid 1pt #c2c2c2;
+	
+	padding-top:4px;
+
+}
+.ChildMenuCaption
+{
+	height:25px;
+	 background-image: url(../Images/tap/bg_Hover_Tap.jpg);
+	 background-repeat:repeat-x;
+	 color:#ffffff;
+	 text-transform:uppercase;
+     width : 100%;
+	font-weight:bold;
+	 font-size:10px;
+	
+}
+.TabaleTabH1
+{
+	 
+  
+	  
+	 border: 0px solid #ffffff;
+ background-color:#dfdfdf;
+	 font-size:16px;
+     font-weight:bold;
+  
+  cursor:pointer;
+}
+.bgTitle
+{
+color:#ffffff;
+
+
+
+}
+.bgComment
+{
+	 background-image: url(../Images/Icons/bgComment.jpg);
+	  background-repeat:repeat-x;
+	
+}
+.bgTilteComment
+{
+	 background-image: url(../Images/Icons/bgTilteComment.jpg);
+	  background-repeat:repeat-x;
+	height:28px;
+	font-size:14px;  
+	color:#333333;
+	font-weight:bold;
+	border-left:solid 1px #cccccc;
+	border-right:solid 1px #cccccc;
+	padding-left:20px;
+}
+.bgheaderRight
+{
+	 background-image: url(../Images/Icons/bgHeaderRight.jpg);
+	  background-repeat:repeat-y;
+
+}
+.HoteNews
+{ 
+	
+	  
+  border-left: 1px solid #dfdfdf;
+   border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+  width: 100%;
+  position:relative;
+ 
+ 
+  z-index:98;
+ 
+}
+
+/*globalnav*/
+
+#globalnav {
+	position:relative;
+	float:left;
+	width:100%;
+	padding:0 10px 0em 0px;
+	margin:0;
+	list-style:none;
+	line-height:1em;
+      height:38px;
+	 background-image: url(../Images/MenuHeader/bgMenu.jpg);
+	  background-repeat:repeat-x;
+	  color:#c3dbed;
+	
+	  
+	font-weight:bold;
+}
+
+#globalnav LI {
+	float:left;
+	margin:0;
+	padding:2 0 0 0 ;
+}
+
+#globalnav A {
+	display:block;
+	color:#c3dbed;
+	text-decoration:none;
+	font-weight:bold;
+	
+	margin:0;
+	padding:9px 18px 11px 18px;
+	
+	border-right:1px solid #74a9d1;
+}
+
+#globalnav A:hover,
+#globalnav A:active,
+#globalnav A.here:link,
+#globalnav A.here:visited {
+	Color:#ffffff;
+	 background-image:url(../Images/tap/bg_Hover_Tap1.gif);
+	
+}
+
+#globalnav A.here:link,
+#globalnav A.here:visited {
+	position:relative;
+	z-index:102;
+}
+
+/*subnav*/
+
+#globalnav UL {
+	position:absolute;
+	left:0;
+	top:1em;
+	float:left;
+	width:960px;
+	margin-top:15px;
+	padding:0.25em 0.25em 0.25em 1em;
+	list-style:none;
+	
+	 height:38px;
+}
+
+#globalnav UL LI {
+color:#333333;
+	float:left;
+	display:block;
+	margin-top:10px;
+	
+}
+
+#globalnav UL A {
+	color:#333333;
+	display:inline;
+	margin:0;
+	padding:0 1em;
+	border:0;
+	
+}
+
+#globalnav UL A:hover,
+#globalnav UL A:active,
+#globalnav UL A.here:link,
+#globalnav UL A.here:visited {
+	color:red;
+	
+	 background-image: url(../Images/MenuHeader/bgMenu1.jpg);
+}
+
+.loginHome
+{
+	background-image: url(../Icons/bg_Login.jpg);
+                    background-repeat:repeat-x;
+                     background-repeat:repeat-y;
+                    width: 257px;
+                     height:234px;
+}
+
+.bgTitleBaiHoc
+{
+	background-image: url(../Icons/bgTitleBaiHoc.jpg);
+                    background-repeat:repeat-x;
+                     height:29px;
+                      color:White;
+                      font-weight:bold;
+}
+.monhoc
+{
+	background-image: url(../Icons/monhoc.jpg);
+                    background-repeat:repeat-x;
+                    background-repeat:repeat-y;
+                     height:23px;
+                      color:White;
+                      font-weight:bold;
+}
+.MenuBaiHoc
+{
+	border-bottom:solid 2px #c8c7ba;
+}
+.bgHotBaiHoc
+{
+	background-image: url(../Icons/bgHotBaiHoc.jpg);
+                    background-repeat:repeat-x;
+                    background-repeat:repeat-y;
+                     height:198px;
+                     width:991px;
+                      color:White;
+                      font-weight:bold;
+}
+.bgHeaderBaihoc
+{
+ background-image:url(../Images/tap/hover_tab_bg.gif);
+
+
+
+}
+.FooterLopHoc
+{  background-image:url(../lophoc/tap/Untitled-1_06.gif);
+
+    
+    color:White;
+ padding:3px;
+    font-weight:bold;
+}
