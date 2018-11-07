@@ -1,0 +1,55 @@
+.textNav{
+    color: black;
+}
+.alignRignt{
+    margin-right: 90px;
+}
+.iconImg{
+    height: 30px;
+    width: 30px;
+}
+.accoutInfor{
+    font-size: 11px;
+}
+.textNotice{
+    color: yellow;
+    
+}
+.textWarning{
+    color:red;
+}
+body{
+   
+}
+/* use for sticky */
+.sticky {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+#menu{
+    z-index: 5;
+}
+/* use for sticky */
+
+/* use for fill image account */
+.fillImage{
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.iconImage{
+    height: 10px;
+    width: 10px;
+}
+.oneAnswer{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.itemBottom{
+    background-color: antiquewhite;
+    margin-top: 5px;
+}

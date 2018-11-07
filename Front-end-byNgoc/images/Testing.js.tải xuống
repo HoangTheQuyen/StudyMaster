@@ -1,0 +1,175 @@
+﻿// JScript File
+var QestionChekID = 0;
+function btnHoanThanh() {
+    var where_to = confirm("Đồng ý đánh dấu đề thi đã làm hoàn thành để theo dõi?");
+    if (where_to == true) {
+        CallBackHoanThanh.Callback();
+
+    }
+    else {
+
+    }
+
+}
+function Rate(QuestionID, IsRateLevel, IsFalse, UserName) {
+
+
+    var where_to = confirm("Em đồng ý với nhận xét này?");
+    if (where_to == true) {
+        CallBackRate.Callback(QuestionID, IsRateLevel, IsFalse, UserName);
+        var ID = "Rate" + QuestionID;
+        document.getElementById(ID).style.display = "none";
+    }
+
+
+}
+function CheckKey(Key, QuestionID, ChuyenDeID, AnKey, LevelID, ValiQuestionID) {
+
+
+
+
+    QestionChekID = QuestionID;
+    document.getElementById('QuestionID').value = QuestionID;
+
+    var rA = "rdA" + QuestionID;
+    var rB = "rdB" + QuestionID;
+    var rC = "rdC" + QuestionID;
+    var rD = "rdd" + QuestionID;
+
+    document.getElementById(rA).disabled = true;
+    document.getElementById(rB).disabled = true;
+    document.getElementById(rC).disabled = true;
+    document.getElementById(rD).disabled = true;
+
+
+    CallBackGuiKetQua.Callback(Key, QuestionID, ValiQuestionID);
+
+
+    
+
+}
+function CallBackHoanThanhComplete() {
+}
+
+function CallbackCompleteGuiThanhCong() {
+
+
+   
+    var strKey = "Key" + document.getElementById('QuestionID').value;
+
+    if (document.getElementById('IsFinisedThiOnline') != null)
+    {
+        if (document.getElementById('IsFinisedThiOnline').value == "0")
+        {
+            var strKey = "Content" + document.getElementById('QuestionID').value;
+
+
+           
+
+            if (document.getElementById("DivItemTemp") != null) {
+
+                var DivItem = "Item" + document.getElementById('QuestionID').value;
+                document.getElementById(strKey).innerHTML ="<div align=center>"+ document.getElementById("DivItemTemp").innerHTML+"</div>";
+            } else {
+                document.getElementById(strKey).innerHTML = "";
+            }
+            return;
+        }
+    }
+
+
+    if (document.getElementById("DivItemTemp") != null) {
+
+        var DivItem = "Item" + document.getElementById('QuestionID').value;
+        document.getElementById(DivItem).innerHTML = document.getElementById("DivItemTemp").innerHTML;
+    }
+
+            if (document.getElementById('IsTrue').value == "True") 
+            {
+                document.getElementById(strKey).innerHTML = "<b style='color:blue'>Đúng -  Đáp án " + document.getElementById('sKey').value + "</b>";
+            } else
+            {
+                document.getElementById(strKey).innerHTML = "<b style='color:red'>Sai - Đáp án " + document.getElementById('sKey').value + "</b>";
+
+            }
+
+            var strBaiTap = "BaiTap" + document.getElementById('QuestionID').value;
+            document.getElementById(strBaiTap).innerHTML = document.getElementById('Noel').value + document.getElementById(strBaiTap).innerHTML;
+
+            document.getElementById(strBaiTap).style.display = "block";
+
+
+
+            if (document.getElementById("HiddenCommentQuestion").value == "1") {
+
+
+                var HiddenQuestionDivID = "HiddenQuestionDivID" + document.getElementById('QuestionID').value;
+                document.getElementById(HiddenQuestionDivID).style.display = "none";
+            }
+
+   
+  
+
+
+}
+
+
+
+
+function An(QuestionID, Noel) {
+
+    var strBaiTap = "An" + QuestionID;
+    document.getElementById(strBaiTap).style.display = "none";
+    var strBaiTapHien = "Hien" + QuestionID;
+
+    var strBT = document.getElementById(strBaiTapHien).innerHTML;
+
+
+    document.getElementById(strBaiTapHien).innerHTML = Noel + strBT;
+
+
+    document.getElementById(strBaiTapHien).style.display = "block";
+
+}
+
+
+
+
+
+function Hien(QuestionID) {
+    var strBaiTap = "An" + QuestionID;
+    var strBaiTapHien = "Hien" + QuestionID;
+    document.getElementById(strBaiTap).style.display = "block";
+    document.getElementById(strBaiTapHien).style.display = "none";
+
+
+}
+function LoiDapAn(QuestionID) {
+    CallBackLoiDapAn.Callback(QuestionID)
+}
+function LoiBaiTap(QuestionID) {
+    CallBackLoiBaiTap.Callback(QuestionID)
+}
+
+
+function XemVip(QuestionID) {
+
+    CallBackUserName.Callback(QuestionID);
+
+}
+
+
+function getCode() {
+    var str = document.getElementById("Code").value;
+    var key = "";
+    var i = 0;
+    for (i = 0; i < 50; i++) {
+        if (i % 7 == 0) {
+            key = key + str.substring(i, i + 3);
+        }
+    }
+    return key;
+}
+
+
+
