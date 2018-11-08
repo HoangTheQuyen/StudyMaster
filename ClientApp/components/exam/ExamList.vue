@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div class="exams">
         <b-row class="mt-4">
             <b-col class="mb-4" sm="6" v-for="exam in exams" :key="exam.id">
@@ -20,33 +20,33 @@
 </template>
 
 <script>
-export default {
-    name: "exam-list",
+    export default {
+        name: "exam-list",
 
-    props: {
-        exams: {
-            type: Array,
-            required: true
+        props: {
+            exams: {
+                type: Array,
+                required: true
+            }
+        },
+
+        methods: {
+            view(exam) {
+                this.$router.push(`/exams/${exam.slug}`);
+            }
         }
-    },
 
-    methods: {
-        view(exam) {
-            this.$router.push(`/exams/${exam.slug}`);
-        }
-    }
-
-};
+    };
 </script>
 
 
 <style lang="scss" scoped>
-.topic {
-    border: 3px solid #eee;
+    .topic {
+        border: 3px solid #eee;
+        img, h2
 
-    img,
-    h2 {
+    {
         cursor: pointer;
     }
-}
+    }
 </style>
