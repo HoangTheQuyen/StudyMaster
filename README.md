@@ -2,7 +2,7 @@
 
 Đồ án môn Quản Lí Yêu Cầu Phần Mềm
 
-+ 1512126	Nguyễn Hữu Đức
++ 1512126	- Nguyễn Hữu Đức
 + 1512350	- Bùi Như Ngọc
 + 1412412	- Phùng Đức Phú
 + 1512445	- Hoàng Thế Quyền
